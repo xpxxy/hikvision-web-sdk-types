@@ -1,6 +1,6 @@
 {
   "name": "@xpxxy/hikvision-web-sdk-types",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript type declarations for HikVision Web SDK (No-Plugin / 无插件版本)",
   "types": "src/HikVisionWebSDK.d.ts",
   "exports": {
