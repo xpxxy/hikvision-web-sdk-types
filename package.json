@@ -23,5 +23,13 @@
   ],
   "author": "xpxxy",
   "license": "MIT",
+  "homepage": "https://github.com/xpxxy/hikvision-web-sdk-types",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xpxxy/hikvision-web-sdk-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpxxy/hikvision-web-sdk-types/issues"
+  },
   "devDependencies": {}
 }

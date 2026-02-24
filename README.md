@@ -4,6 +4,10 @@
 
 基于海康威视 WebSDK_noPlugin_V3.4.0_251202_20251204103656 版本编写。
 
+## 注意
+类型包定义仅供参考，请以官方demo中的demo.js和实际使用为准。  
+类型包内的`错误码`定义仅供参考，海康在文档内给出的错误码不全且部分有误。
+
 ## 安装
 
 ```bash
@@ -12,7 +16,7 @@ npm install @xpxxy/hikvision-web-sdk-types
 
 ## 使用
 
-海康 **无插件** Web SDK 通过 `<script>` 标签引入后挂载在 `window.WebVideoCtrl`，安装本包后即可获得类型提示，无需额外声明。
+海康 **无插件** Web SDK 通过 `<script>` 标签引入后挂载在 `window.WebVideoCtrl`，安装本包后即可获得类型提示。
 
 ```ts
 // 请确保sdk已通过script正确引入
