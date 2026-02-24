@@ -298,14 +298,14 @@ declare namespace HikVisionWebSDKNoPluginVersion {
 		 * @param {string} szPlaybackURI 录像URL，这个URL在录像搜索中可以得到
 		 * @param {string} szFileName 要下载录像录像名字
 		 * @param {I_StartDownloadRecordOptions} options 可选参数
-		 * @return {number} 成功返回一个大于等于0的下载ID，失败返回-1 （无插件直接下载）
+		 * @return {Promise<number>} 成功返回一个大于等于0的下载ID，失败返回-1 （无插件直接下载）
 		 */
 		I_StartDownloadRecord: (
 			szDeviceIdentify: string,
 			szPlaybackURI: string,
 			szFileName: string,
 			options?: I_StartDownloadRecordOptions
-		) => number
+		) => Promise<number>
 
 		/**
 		 * @description: 开始按时间下载 调用该接口，可以下载存储在设备中的录像,需要设备能力支持
@@ -315,7 +315,7 @@ declare namespace HikVisionWebSDKNoPluginVersion {
 		 * @param {string} szStartTime 开始时间：如：2013-12-23 00:00:00
 		 * @param {string} szEndTime 结束时间：如：2013-12-23 23:59:59
 		 * @param {I_StartDownloadRecordOptions} options 可选参数
-		 * @return {number} 成功返回一个大于等于0的下载ID，失败返回-1 （无插件直接下载）
+		 * @return {Promise<number>} 成功返回一个大于等于0的下载ID，失败返回-1 （无插件直接下载）
 		 */
 		I_StartDownloadRecordByTime: (
 			szDeviceIdentify: string,
@@ -324,7 +324,7 @@ declare namespace HikVisionWebSDKNoPluginVersion {
 			szStartTime: string,
 			szEndTime: string,
 			options?: I_StartDownloadRecordOptions
-		) => number
+		) => Promise<number>
 
 		/**
 		 * @description:云台方向控制
@@ -924,7 +924,7 @@ declare namespace HikVisionWebSDKNoPluginVersion {
 		/**窗口播放状态：0-没有播放，1-预览，2-回放，3-暂停，4-单帧，5-倒放，6-倒放暂停*/
 		iPlayStatus: number
 
-		//下方属性文档未给出但是实际有
+		/**下方属性文档未给出但返回值实际有 */
 		// b3DZoom: boolean
 		// bEZoom: boolean
 		// bPTZAuto: boolean
